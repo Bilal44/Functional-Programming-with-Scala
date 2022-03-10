@@ -11,7 +11,7 @@ print(x+y)
 x.+(y)
 x./(y)
 
-// TASK 2
+// TASK 2: Imperative style power function
 def power(value:Int, power:Int):Int = {
   var result = 1
   for(i <- 0 to power-1) {
@@ -21,3 +21,12 @@ def power(value:Int, power:Int):Int = {
 }
 
 power(2, 20)
+
+// TASK 3: Singleton object definition
+object HelloWorld{
+  def main(args: Array[String]) {
+    println("Hello " + args(0))
+  }
+}
+
+HelloWorld.main(Array("Bilal"))
