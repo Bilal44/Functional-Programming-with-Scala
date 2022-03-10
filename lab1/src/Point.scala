@@ -3,4 +3,7 @@ class Point(var x: Int, var y: Int) {
     x = x + dx
     y = y + dy
   }
+
+  override def toString: String =
+    "(" + x + ", " + y + ")"
 }
