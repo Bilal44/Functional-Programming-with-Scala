@@ -38,3 +38,11 @@ val myString = "A Santa Lived As a Devil At NASA"
 
 // 1. Reverse the string
 myString.reverse
+
+// 2. Function to check for palindrome ignoring spaces and casing
+def IsPalindrome(string: String): Boolean = {
+  val stringWithoutSpaces = string.replace(" ", "")
+  return stringWithoutSpaces.toLowerCase() == stringWithoutSpaces.reverse.toLowerCase()
+}
+
+IsPalindrome(myString)
