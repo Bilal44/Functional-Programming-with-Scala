@@ -30,3 +30,11 @@ myList.reverse.filter(e => e < 6).splitAt(2)
 // 8. Chain two calls to find the lowest value excluding
 // the first three elements
 myList.slice(3, myList.length).min
+
+
+// TASK: String
+
+val myString = "A Santa Lived As a Devil At NASA"
+
+// 1. Reverse the string
+myString.reverse
