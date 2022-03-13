@@ -46,3 +46,13 @@ def IsPalindrome(string: String): Boolean = {
 }
 
 IsPalindrome(myString)
+
+// 3a. Remove the first word and run palindrome check
+val myStringWithoutFirstWord = myString.substring(myString.indexOf(" ") + 1)
+IsPalindrome(myStringWithoutFirstWord)
+
+// 3b. Count the number of spaces in myString
+val numOfSpaces = myString.count(_ == ' ')
+
+// 3c. Count the number of distinct characters excluding spaces
+myString.length - numOfSpaces
