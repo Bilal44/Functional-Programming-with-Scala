@@ -41,7 +41,7 @@ myString.reverse
 
 // 2. Function to check for palindrome ignoring spaces and casing
 def IsPalindrome(string: String): Boolean = {
-  val stringWithoutSpaces = string.replace(" ", "")
+  val stringWithoutSpaces = string.replaceAll("[\\W\\S]", "")
   return stringWithoutSpaces.toLowerCase() == stringWithoutSpaces.reverse.toLowerCase()
 }
 
@@ -56,3 +56,7 @@ val numOfSpaces = myString.count(_ == ' ')
 
 // 3c. Count the number of distinct characters excluding spaces
 myString.length - numOfSpaces
+
+// 4. Refactor IsPalindrome to return true for the challenge string
+val challengeString = "A man, a plan, a canal, Panama"
+IsPalindrome(challengeString)
