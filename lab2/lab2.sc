@@ -1,4 +1,4 @@
-// TASK: List operations
+// TASK: List operations //
 
 // Declare a list as value
 val myList = List(1, 3, 1, 7, 9, 5)
@@ -32,7 +32,7 @@ myList.reverse.filter(e => e < 6).splitAt(2)
 myList.slice(3, myList.length).min
 
 
-// TASK: String
+// TASK: String //
 
 val myString = "A Santa Lived As a Devil At NASA"
 
@@ -60,3 +60,13 @@ myString.length - numOfSpaces
 // 4. Refactor IsPalindrome to return true for the challenge string
 val challengeString = "A man, a plan, a canal, Panama"
 IsPalindrome(challengeString)
+
+// TASK: Recursion //
+
+// 1. Pattern matching factorial function
+def factorial(n: Int): BigInt = n match {
+  case 0 => 1
+  case _ => factorial (n-1) * n
+}
+
+factorial(10)
