@@ -70,3 +70,12 @@ def factorial(n: Int): BigInt = n match {
 }
 
 factorial(10)
+
+// 2. Calculate greatest common denominator using pattern matching
+def gcd(a: Int, b: Int): Int = b match {
+  case 0 => a
+  case _ => gcd(b, a % b)   // tail recursion
+}
+
+gcd(15, 12)
+gcd(24, 10)
