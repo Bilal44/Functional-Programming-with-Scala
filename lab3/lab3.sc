@@ -16,3 +16,13 @@ list1 ::: list2
 
 // 3c. Join both lists using ++
 list1 ++ list2
+
+// 4. Define a function to get the tail of a list
+def last(list: List[Int]): Int = list match {
+  case h :: Nil => h
+  case _ :: tail => last(tail)
+}
+
+last(list1)
+last(List(1, 2, 3))
+last(List(2))
