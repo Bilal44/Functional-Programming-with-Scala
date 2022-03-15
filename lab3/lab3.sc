@@ -7,3 +7,12 @@ val list1 = 1 :: 2 :: 3 :: 4 :: 5 :: 6 :: 7 :: 8 :: 9 :: 10 :: Nil
 
 // 2. Declare the same list as a variable using range function
 var list2 = List.range(1, 11)
+
+// 3a. Join both lists using ::
+list1 :: list2
+
+// 3b. Join both lists using ::: and observe the difference
+list1 ::: list2
+
+// 3c. Join both lists using ++
+list1 ++ list2
