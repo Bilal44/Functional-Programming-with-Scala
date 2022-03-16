@@ -16,9 +16,8 @@ list1 ::: list2
 list1 ++ list2
 
 // 4. Define a function to get the tail of a list
-def last(list: List[Int]): Int = list match {
-  case h :: Nil => h
-  case _ :: tail => last(tail)
+def last(list: List[Int]): Int = {
+  if (list.tail != Nil) last(list.tail) else list.head
 }
 
 last(list1)
