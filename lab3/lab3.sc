@@ -51,3 +51,11 @@ def Sum(ls: List[Int]): Int = ls match {
 
 Sum(list1)  // Sum = 55
 list1.sum   // Sum = 55
+
+// TASK 2: Tail Recursion
+
+// 1. Calculate the length of a list with tail recursion
+def listLength(ls:List[_]):Int = ls match {
+  case Nil => 0
+  case h :: tail => 1 + listLength(ls.tail)
+}
