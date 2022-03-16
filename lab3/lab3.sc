@@ -48,3 +48,6 @@ def Sum(ls: List[Int]): Int = ls match {
   case h :: Nil => h
   case _ :: tail => ls.head + Sum(tail)
 }
+
+Sum(list1)  // Sum = 55
+list1.sum   // Sum = 55
