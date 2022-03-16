@@ -33,3 +33,11 @@ def lastif(ls: List[Int]): Int = {
 }
 
 lastif(list1) // Tail = 10
+
+// 6. Use pattern matching to get the last item of a list
+def lastPattern(ls: List[Int]): Int = ls match {
+  case h :: Nil => h
+  case _ :: tail => last(tail)
+}
+
+lastPattern(list1) // Tail = 10
