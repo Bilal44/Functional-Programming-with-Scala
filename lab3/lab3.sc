@@ -1,5 +1,3 @@
-import scala.collection.immutable.::
-
 // TASK: Lists and Recursion
 
 // 1. Declare a list using 'cons' syntax
