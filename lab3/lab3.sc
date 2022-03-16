@@ -25,14 +25,14 @@ last(List(1, 2, 3)) // Tail = 3
 last(List(2)) // Tail = 2
 
 // 5. Using if-else block to get the last element of a list
-def lastif(ls: List[Int]): Int = {
+def lastIf(ls: List[Int]): Int = {
   if (ls.tail == Nil)
     ls.head
   else
-    lastif(ls.tail)
+    lastIf(ls.tail)
 }
 
-lastif(list1) // Tail = 10
+lastIf(list1) // Tail = 10
 
 // 6. Use pattern matching to get the last item of a list
 def lastPattern(ls: List[Int]): Int = ls match {
