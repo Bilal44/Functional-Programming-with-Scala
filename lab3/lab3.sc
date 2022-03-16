@@ -20,6 +20,6 @@ def last(list: List[Int]): Int = {
   if (list.tail != Nil) last(list.tail) else list.head
 }
 
-last(list1)
-last(List(1, 2, 3))
-last(List(2))
+last(list1) // Tail = 10
+last(List(1, 2, 3)) // Tail = 3
+last(List(2)) // Tail = 2
