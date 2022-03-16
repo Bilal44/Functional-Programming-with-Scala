@@ -41,3 +41,10 @@ def lastPattern(ls: List[Int]): Int = ls match {
 }
 
 lastPattern(list1) // Tail = 10
+
+
+// 7. Use recursion to get the sum of all elements
+def Sum(ls: List[Int]): Int = ls match {
+  case h :: Nil => h
+  case _ :: tail => ls.head + Sum(tail)
+}
