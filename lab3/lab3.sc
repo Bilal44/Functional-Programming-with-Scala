@@ -65,4 +65,13 @@ list2.length // Length = 10
 
 // 2. Create a much longer list from list2
 1 to 15 foreach(x=> list2 = list2++list2)
-listLength(list2)
+listLength(list2) // StackOverflowError
+
+// 3. Calculate the length of a list with tail-recursion
+def listLengthTailRecursive(ls:List[_]):Int = {
+  def listLength_nested(ls:List[_], len: Int):Int = ls match{
+    case Nil => len
+    case h :: tail => listLength_nested(ls.tail, len+1)
+  }
+  listLength_nested(ls, 0)
+}
