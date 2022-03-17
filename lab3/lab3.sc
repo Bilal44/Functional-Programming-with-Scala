@@ -80,10 +80,13 @@ listLengthTailRecursive(list2) // Length = 327680
 
 // 3. Tail recursive version of the earlier sum function
 def listSumTailRecursive(ls:List[_]):Int = {
-  def listSum_nested(ls: List[_], currentSum: Int): Int = ls match {
-    case Nil => currentSum
-    case h :: tail => listSum_nested(tail, currentSum + h.asInstanceOf[Int])
+  def listSum_nested(ls: List[_], runningSum: Int): Int = ls match {
+    case Nil => runningSum
+    case h :: tail => listSum_nested(tail, runningSum + h.asInstanceOf[Int])
   }
 
   listSum_nested(ls, 0)
 }
+
+listSumTailRecursive(list2) // Sum = 1802240
+list2.sum // Sum = 1802240
