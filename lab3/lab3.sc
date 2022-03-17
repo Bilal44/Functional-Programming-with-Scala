@@ -59,3 +59,6 @@ def listLength(ls:List[_]):Int = ls match {
   case Nil => 0
   case h :: tail => 1 + listLength(ls.tail)
 }
+
+listLength(list2) // Length = 10
+list2.length // Length = 10
