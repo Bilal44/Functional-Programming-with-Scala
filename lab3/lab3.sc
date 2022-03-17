@@ -54,7 +54,7 @@ list1.sum   // Sum = 55
 
 // TASK 2: Tail Recursion
 
-// 1. Calculate the length of a list with tail recursion
+// 1. Calculate the length of a list with recursion
 def listLength(ls:List[_]):Int = ls match {
   case Nil => 0
   case h :: tail => 1 + listLength(ls.tail)
@@ -62,3 +62,7 @@ def listLength(ls:List[_]):Int = ls match {
 
 listLength(list2) // Length = 10
 list2.length // Length = 10
+
+// 2. Create a much longer list from list2
+1 to 15 foreach(x=> list2 = list2++list2)
+listLength(list2)
