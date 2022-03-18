@@ -98,3 +98,14 @@ def listSumTailRecursive(ls:List[_]):Int = {
 
 listSumTailRecursive(list2) // Sum = 1802240
 list2.sum // Sum = 1802240
+
+// 5. Tail recursive version of the power function from lab 2
+def power(value:Int, pow:Int): BigInt = {
+  def power_nested(pow:Int, ans:Int): BigInt = pow match {
+    case 0 => ans
+    case _ => power_nested(pow - 1, ans * value) // tail recursion
+  }
+  power_nested(pow, 1)
+}
+
+power(12, 8) // Ans = 429981696

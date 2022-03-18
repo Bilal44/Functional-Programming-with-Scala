@@ -83,7 +83,7 @@ gcd(24, 10)
 // 3. Challenge - Recursive version of power function from lab 1
 def power(value:Int, pow:Int): BigInt = pow match {
   case 0 => 1
-  case _ => value * power(value, pow - 1) // tail recursion
+  case _ => value * power(value, pow - 1) // head recursion
 }
 
-power(12, 8)
+power(12, 8) // Ans = 429981696
