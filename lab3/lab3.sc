@@ -111,23 +111,23 @@ def power(value:Int, pow:Int): BigInt = {
 power(12, 8) // Ans = 429981696
 
 // 6a. Pattern match version of Fibonacci number calculator
-def fibPattern(n: Int): Int = n match {
+def fib_pattern(n: Int): Int = n match {
   case 0 => 0
   case 1 => 1
-  case _ => fibPattern(n - 1) + fibPattern(n - 2)
+  case _ => fib_pattern(n - 1) + fib_pattern(n - 2)
 }
 
-fibPattern(6) // Returns 8
+fib_pattern(6) // Returns 8
 
 // 6b. If-else version of Fibonacci number calculator
-def fibIf(n: Int): Int = {
+def fib_if(n: Int): Int = {
   if (n <= 1)
     n
   else
-    fibIf(n - 1) + fibIf(n - 2)
+    fib_if(n - 1) + fib_if(n - 2)
 }
 
-fibIf(6) // Returns 8
+fib_if(6) // Returns 8
 
 // 6c. Nested version of Fibonacci number calculator
 def fib(n: Int): Int = {
