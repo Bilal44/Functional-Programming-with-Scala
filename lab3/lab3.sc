@@ -1,4 +1,8 @@
-// TASK: Lists and Recursion
+/*
+--------------------------
+ TASK: Lists and Recursion
+--------------------------
+ */
 
 // 1. Declare a list using 'cons' syntax
 val list1 = 1 :: 2 :: 3 :: 4 :: 5 :: 6 :: 7 :: 8 :: 9 :: 10 :: Nil
@@ -52,7 +56,11 @@ def Sum(ls: List[Int]): Int = ls match {
 Sum(list1)  // Sum = 55
 list1.sum   // Sum = 55
 
-// TASK 2: Tail Recursion
+/*
+-----------------------
+ TASK 2: Tail Recursion
+-----------------------
+ */
 
 // 1. Calculate the length of a list with recursion
 def listLength(ls:List[_]):Int = ls match {
@@ -71,18 +79,18 @@ list2.length // Length = 10
 def listLengthTailRecursive(ls:List[_]):Int = {
   def listLength_nested(ls:List[_], len: Int):Int = ls match{
     case Nil => len
-    case h :: tail => listLength_nested(ls.tail, len+1)
+    case _ :: tail => listLength_nested(tail, len+1)
   }
   listLength_nested(ls, 0)
 }
 
 listLengthTailRecursive(list2) // Length = 327680
 
-// 3. Tail recursive version of the earlier sum function
+// 4. Tail recursive version of the earlier sum function
 def listSumTailRecursive(ls:List[_]):Int = {
   def listSum_nested(ls: List[_], runningSum: Int): Int = ls match {
     case Nil => runningSum
-    case h :: tail => listSum_nested(tail, runningSum + h.asInstanceOf[Int])
+    case h :: tail => listSum_nested(tail, runningSum + h.toString.toInt)
   }
 
   listSum_nested(ls, 0)
