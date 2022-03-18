@@ -118,3 +118,13 @@ def fibPattern(n: Int): Int = n match {
 }
 
 fibPattern(6) // Returns 8
+
+// 6b. If-else version of Fibonacci number calculator
+def fibIf(n: Int): Int = {
+  if (n <= 1)
+    n
+  else
+    fibIf(n - 1) + fibIf(n - 2)
+}
+
+fibIf(6) // Returns 8
