@@ -109,3 +109,12 @@ def power(value:Int, pow:Int): BigInt = {
 }
 
 power(12, 8) // Ans = 429981696
+
+// 6a. Pattern match version of Fibonacci number calculator
+def fibPattern(n: Int): Int = n match {
+  case 0 => 0
+  case 1 => 1
+  case _ => fibPattern(n - 1) + fibPattern(n - 2)
+}
+
+fibPattern(6) // Returns 8
