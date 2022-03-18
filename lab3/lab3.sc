@@ -128,3 +128,15 @@ def fibIf(n: Int): Int = {
 }
 
 fibIf(6) // Returns 8
+
+// 6c. Nested version of Fibonacci number calculator
+def fib(n: Int): Int = {
+  def fib_nested(n: Int, left: Int, right: Int): Int = n match {
+    case 0 => 0
+    case 1 => right
+    case _ => fib_nested(n-1, right, left+right)
+  }
+  fib_nested(n, 0, 1)
+}
+
+fib(6) // Returns 8
