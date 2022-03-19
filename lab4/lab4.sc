@@ -20,3 +20,13 @@ val list = List.range(1, 20)
 def sum1(list:List[Int]): Int = {
   list.foldLeft(0)(_ + _)
 }
+
+sum1(list) == list.sum // Returns true
+
+// Define and test a function length that uses the foldLeft
+// method to compute the length of the list
+def len1(list:List[Int]): Int = {
+  list.foldLeft(0){ (x, _) => x + 1 }
+}
+
+len1(list) == list.length // Returns true
