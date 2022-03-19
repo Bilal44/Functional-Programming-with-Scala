@@ -14,3 +14,9 @@ val upperLs = lowerLs map {_.toUpperCase}
 
 // 3. Create a list of integers list containing the values 1 to 19
 val list = List.range(1, 20)
+
+// 4. Define and test a function sum that uses the the foldLeft
+// method of List to evaluate the sum of the list elements
+def sum1(list:List[Int]): Int = {
+  list.foldLeft(0)(_ + _)
+}
