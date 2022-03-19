@@ -148,4 +148,12 @@ def fib_default(n: Int, left: Int = 0, right: Int = 1): Int = n match {
   case _ => fib_default(n-1, right, left+right)
 }
 
-fib_default(6)
+fib_default(6) // Returns 8
+
+// Optional: if-else version of head-recursive listLength function
+def listLength_if(ls:List[_]):Int = {
+  if(ls == Nil)
+    0
+  else
+    1 + listLength_if(ls.tail)
+}
