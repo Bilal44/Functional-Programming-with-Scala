@@ -30,3 +30,12 @@ def len1(list:List[Int]): Int = {
 }
 
 len1(list) == list.length // Returns true
+
+// Define and test a function average that uses the foldLeft
+// method to compute the average (mean) of the list elements
+def avg1(list:List[Int]): Float = {
+  list.foldLeft(0)(_ + _).toFloat/list.foldLeft(0){ (x, _) => x + 1 }
+}
+
+avg1(list) == list.sum.toFloat/list.length // Returns true
+avg1(list) == list.sum/list.length // Returns true
