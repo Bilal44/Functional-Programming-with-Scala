@@ -157,3 +157,12 @@ def listLength_if(ls:List[_]):Int = {
   else
     1 + listLength_if(ls.tail)
 }
+
+// Optional: if-else version of tail-recursive listLength function
+def listLength_tail_if(ls:List[_]):Int = {
+  def listLength_nested(ls:List[_], len: Int):Int = {
+    if(ls == Nil) len
+    else listLength_nested(ls.tail, len+1)
+  }
+  listLength_nested(ls, 0)
+}
