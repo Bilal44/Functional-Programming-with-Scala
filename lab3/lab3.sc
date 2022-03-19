@@ -129,7 +129,7 @@ def fib_if(n: Int): Int = {
 
 fib_if(6) // Returns 8
 
-// 6c. Nested version of Fibonacci number calculator
+// 6c. Nested version of Fibonacci number calculator (Challenge)
 def fib(n: Int): Int = {
   def fib_nested(n: Int, left: Int, right: Int): Int = n match {
     case 0 => 0
@@ -140,3 +140,12 @@ def fib(n: Int): Int = {
 }
 
 fib(6) // Returns 8
+
+// 6d. Tail recursive Fibonacci number calculator with default parameters (Challenge)
+def fib_default(n: Int, left: Int = 0, right: Int = 1): Int = n match {
+  case 0 => 0
+  case 1 => right
+  case _ => fib_default(n-1, right, left+right)
+}
+
+fib_default(6)
