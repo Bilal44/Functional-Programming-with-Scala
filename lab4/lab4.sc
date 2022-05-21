@@ -46,4 +46,10 @@ def last1(list:List[Int]): Int = {
   list.foldLeft(list.head)((_, y) => y)
 }
 
+// A more genericised version of 7
+def lastGeneric[A](list:List[A]): A = {
+  list.foldLeft(list.head)((_, y) => y)
+}
+
+lastGeneric(list) == list.last  // Returns true
 last1(list) == list.last // Returns true
