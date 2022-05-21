@@ -66,3 +66,15 @@ def avg(list: List[Int]): Float = list match {
 }
 
 avg(list) == avg1(list) // Returns true
+
+// 8. Test the difference between foldLeft and foldRight
+// with the help of Scala documentation for the List class
+
+// 8a. Comparing foldLeft and foldRight for adding list elements
+def sum2(list:List[Int]): Int = {
+  list.foldRight(0)(_ + _)
+}
+
+// No changes needed as the sum will remain the same whether
+// the addition starts from the beginning or the end of list
+sum2(list) == sum1(list) // Returns true
