@@ -53,3 +53,16 @@ def lastGeneric[A](list:List[A]): A = {
 
 lastGeneric(list) == list.last  // Returns true
 last1(list) == list.last // Returns true
+
+// Alternative approach to compute running average (mean)
+// of the list elements using pattern-matching and foldLeft
+// Source: https://oldfashionedsoftware.com/2009/07/30/lots-and-lots-of-foldleft-examples/
+def avg(list: List[Int]): Float = list match {
+  case head :: tail =>
+    tail.foldLeft((head.toFloat, 1.0.toFloat)) { (x, y) =>
+      println(s"(${x._1} + ($y / ${x._2})) * ${x._2} / (${x._2} + 1), ${x._2 + 1})")
+      ((x._1 + (y / x._2)) * x._2 / (x._2 + 1), x._2 + 1)
+    }._1
+}
+
+avg(list) == avg1(list) // Returns true
