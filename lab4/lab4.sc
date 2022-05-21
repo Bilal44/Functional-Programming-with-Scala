@@ -79,7 +79,7 @@ def sum2(list:List[Int]): Int = {
 // the addition starts from the beginning or the end of list
 sum2(list) == sum1(list) // Returns true
 
-// Comparing foldLeft and foldRight for counting list elements
+// 8b. Comparing foldLeft and foldRight for counting list elements
 def len2(list:List[Int]): Int = {
   // Slight change needed as the parameter order is reversed
   // for foldRight, 1st param being the element value and the
@@ -88,3 +88,12 @@ def len2(list:List[Int]): Int = {
 }
 
 len2(list) == len1(list) // Returns true
+
+// 8c. Comparing foldLeft and foldRight to return the last item of the list
+def last2(list:List[Int]): Int = {
+  // Returns the first element of the list as foldRight traverses
+  // the list from right to left
+  list.foldRight(0){(x, _) => x }
+}
+
+last2(list) == list.head // Returns true
