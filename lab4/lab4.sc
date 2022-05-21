@@ -23,15 +23,15 @@ def sum1(list:List[Int]): Int = {
 
 sum1(list) == list.sum // Returns true
 
-// Define and test a function length that uses the foldLeft
-// method to compute the length of the list
+// 5. Define and test a function length that uses the
+// foldLeft method to compute the length of the list
 def len1(list:List[Int]): Int = {
   list.foldLeft(0){ (x, _) => x + 1 }
 }
 
 len1(list) == list.length // Returns true
 
-// Define and test a function average that uses the foldLeft
+// 6. Define and test a function average that uses the foldLeft
 // method to compute the average (mean) of the list elements
 def avg1(list:List[Int]): Float = {
   list.foldLeft(0)(_ + _).toFloat/list.foldLeft(0){ (x, _) => x + 1 }
@@ -39,3 +39,11 @@ def avg1(list:List[Int]): Float = {
 
 avg1(list) == list.sum.toFloat/list.length // Returns true
 avg1(list) == list.sum/list.length // Returns true
+
+// 7. Define and test a function last that uses the foldLeft
+// method to find the last element of the list
+def last1(list:List[Int]): Int = {
+  list.foldLeft(list.head)((_, y) => y)
+}
+
+last1(list) == list.last // Returns true
