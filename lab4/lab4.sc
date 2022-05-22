@@ -1,3 +1,5 @@
+import scala.collection.immutable.ListSet
+
 /*
   ----------------------------
   Task 1 - Mapping and Folding
@@ -124,3 +126,11 @@ def distinct[A](list:List[A]): List[A] = {
 // the result should contain no repeated values
 val repeatedList = List(1,2,2,3,3,4,5)
 distinct(repeatedList) == repeatedList.distinct // Returns true
+
+// Alternative solution for distinct elements, using Set[A] also
+// returns unique elements however does not guarantee ordering
+def distinctSet[A](list:List[A]): List[A] = {
+  list.foldLeft(ListSet[A]())((x, y) => (x +y)).toList
+}
+
+distinctSet(repeatedList) == repeatedList.distinct // Returns true
