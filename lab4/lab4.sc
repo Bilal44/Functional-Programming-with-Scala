@@ -104,21 +104,21 @@ last2(list) == list.head // Returns true
 // compute, using foldLeft, each of the following:
 
 // 9a. The penultimate element of the list
-def penultimate[A](list:List[A]): A = {
+def penultimate[A](list: List[A]): A = {
   list.foldLeft(list.head, list.tail.head)((x, y) => (x._2, y))._1
 }
 
 penultimate(list) == list(list.length - 2) // Returns true
 
 // 9b. The list in reverse order
-def reverse[A](list:List[A]): List[A] = {
+def reverse[A](list: List[A]): List[A] = {
   list.foldLeft(List[A]())((x, y) => y :: x)
 }
 
 reverse(list) == list.reverse // Returns true
 
 // 9c. The distinct elements of the list
-def distinct[A](list:List[A]): List[A] = {
+def distinct[A](list: List[A]): List[A] = {
   list.foldLeft(List[A]())((x, y) => if (!x.contains(y)) x :+ y else x)
 }
 
@@ -129,8 +129,8 @@ distinct(repeatedList) == repeatedList.distinct // Returns true
 
 // Alternative solution for distinct elements, using Set[A] also
 // returns unique elements however does not guarantee ordering
-def distinctSet[A](list:List[A]): List[A] = {
-  list.foldLeft(ListSet[A]())((x, y) => (x +y)).toList
+def distinctSet[A](list: List[A]): List[A] = {
+  list.foldLeft(ListSet[A]())((x, y) => (x + y)).toList
 }
 
 distinctSet(repeatedList) == repeatedList.distinct // Returns true
