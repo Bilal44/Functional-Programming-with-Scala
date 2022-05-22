@@ -152,3 +152,8 @@ var airports = Map("Glasgow" -> "GLA", "Dubai" -> "DXB", "Berlin" -> "TXL")
 // 2. Create a map moreAirports containing a single pair:
 // Helsinki -> HEL
 val moreAirports = Map("Helsinki" -> "HEL")
+
+// 3. Create a map evenMoreAirports containing the pairs:
+// Glasgow -> PIK
+// Los Angeles -> LAX
+val evenMoreAirports = Map("Glasgow" -> "PIK", "Los Angeles" -> "LAX")
