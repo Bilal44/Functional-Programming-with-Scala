@@ -119,3 +119,8 @@ reverse(list) == list.reverse // Returns true
 def distinct[A](list:List[A]): List[A] = {
   list.foldLeft(List[A]())((x, y) => if (!x.contains(y)) x :+ y else x)
 }
+
+// Test with a list containing the elements (1,2,2,3,3,4,5)
+// the result should contain no repeated values
+val repeatedList = List(1,2,2,3,3,4,5)
+distinct(repeatedList) == repeatedList.distinct // Returns true
