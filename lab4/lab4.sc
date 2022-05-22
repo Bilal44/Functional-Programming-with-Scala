@@ -148,3 +148,7 @@ distinctSet(repeatedList) == repeatedList.distinct // Returns true
 // Berlin -> TXL
 
 var airports = Map("Glasgow" -> "GLA", "Dubai" -> "DXB", "Berlin" -> "TXL")
+
+// 2. Create a map moreAirports containing a single pair:
+// Helsinki -> HEL
+val moreAirports = Map("Helsinki" -> "HEL")
