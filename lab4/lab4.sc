@@ -114,3 +114,8 @@ def reverse[A](list:List[A]): List[A] = {
 }
 
 reverse(list) == list.reverse // Returns true
+
+// 9c. The distinct elements of the list
+def distinct[A](list:List[A]): List[A] = {
+  list.foldLeft(List[A]())((x, y) => if (!x.contains(y)) x :+ y else x)
+}
