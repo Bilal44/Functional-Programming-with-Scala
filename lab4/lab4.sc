@@ -97,3 +97,13 @@ def last2(list:List[Int]): Int = {
 }
 
 last2(list) == list.head // Returns true
+
+// 9. (Challenge) Define and test functions that take a parameter of type List[Int] and
+// compute, using foldLeft, each of the following. You will need to think carefully
+
+// 9a. The penultimate element of the list
+def penultimate[A](list:List[A]): A = {
+  list.foldLeft(list.head, list.tail.head)((x, y) => (x._2, y))._1
+}
+
+penultimate(list) == list(list.length - 2) // Returns true
