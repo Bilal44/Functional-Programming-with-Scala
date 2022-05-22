@@ -134,3 +134,17 @@ def distinctSet[A](list: List[A]): List[A] = {
 }
 
 distinctSet(repeatedList) == repeatedList.distinct // Returns true
+
+/*
+  -------------
+  Task 2 - Maps
+  -------------
+ */
+
+// 1. Create a mutable map airports containing the following key/value pairs
+// representing cities and the codes of their airports (as strings):
+// Glasgow -> GLA
+// Dubai -> DXB
+// Berlin -> TXL
+
+var airports = Map("Glasgow" -> "GLA", "Dubai" -> "DXB", "Berlin" -> "TXL")
