@@ -157,3 +157,7 @@ val moreAirports = Map("Helsinki" -> "HEL")
 // Glasgow -> PIK
 // Los Angeles -> LAX
 val evenMoreAirports = Map("Glasgow" -> "PIK", "Los Angeles" -> "LAX")
+
+// 4. Create a new map newAirports by concatenating moreAirports
+// and evenMoreAirports using the ++ operator
+val newAirports = moreAirports ++ evenMoreAirports
