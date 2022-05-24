@@ -164,8 +164,7 @@ val newAirports = moreAirports ++ evenMoreAirports
 
 // 5. Add (concatentate) newAirports to airports using
 // the ++= operator. Look at the result – what happened to Glasgow?
-airports ++= newAirports
-println(airports) // The value of Glasgow updated to PIK
+airports ++= newAirports // The value of Glasgow updated to PIK
 
 // 6. Add the following single entry to airports using the += operator.
 // Tokyo -> HAN
