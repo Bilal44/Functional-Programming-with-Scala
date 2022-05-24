@@ -170,3 +170,8 @@ airports ++= newAirports // The value of Glasgow updated to PIK
 // Tokyo -> HAN
 airports += "Tokyo" -> "HAN"
 println(airports)
+
+// Extracting data from maps
+
+// 1. Get the keys of a map as a list using the keys method
+val cities = airports.keys.toList
