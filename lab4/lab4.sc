@@ -175,3 +175,6 @@ println(airports)
 
 // 1. Get the keys of a map as a list using the keys method
 val cities = airports.keys.toList
+
+// 1b. Get all the airport codes as a list
+val codes = airports.values.toList
