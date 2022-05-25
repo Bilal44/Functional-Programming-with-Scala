@@ -181,3 +181,9 @@ val codes = airports.values.toList
 
 // 2. Get the value for a specified key
 val gla = airports.get("Glasgow") // Returns an Option[String]
+
+// 3. Extract the value from the Option using pattern matching
+val gla2 = airports.get("Glasgow") match {
+  case Some(ap) => ap
+  case None => "not found"
+}
