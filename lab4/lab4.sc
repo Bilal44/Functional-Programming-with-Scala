@@ -178,3 +178,6 @@ val cities = airports.keys.toList
 
 // 1b. Get all the airport codes as a list
 val codes = airports.values.toList
+
+// 2. Get the value for a specified key
+val gla = airports.get("Glasgow") // Returns an Option[String]
