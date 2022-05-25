@@ -187,3 +187,6 @@ val gla2 = airports.get("Glasgow") match {
   case Some(ap) => ap
   case None => "not found"
 }
+
+// 3a. Unsafe extraction of the value from a map using a valid key
+val gla3 = airports("Glasgow")
