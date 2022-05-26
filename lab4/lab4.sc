@@ -200,4 +200,7 @@ airports.find(_._2 == "LAX").get._1
 
 // 4c. Define a default value to safely extract the value with find
 val default = ("not found","")
+// The key-value pair exists and is returned
 airports.find(_._2 == "HAN").getOrElse(default)._1
+// The key-value pair does not exist and default is returned
+airports.find(_._2 == "GLA").getOrElse(default)._1
