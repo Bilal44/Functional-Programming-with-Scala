@@ -194,3 +194,6 @@ val gla3 = airports("Glasgow")
 
 // 4. Use find method to extract the pair from the map
 airports.find(_._2 == "LAX")
+
+// 4a. Force to retrieve the only desired value (key/airport name)
+airports.find(_._2 == "LAX").get._1
