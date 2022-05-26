@@ -197,3 +197,7 @@ airports.find(_._2 == "LAX")
 
 // 4a. Force to retrieve the only desired value (key/airport name)
 airports.find(_._2 == "LAX").get._1
+
+// 4c. Define a default value to safely extract the value with find
+val default = ("not found","")
+airports.find(_._2 == "HAN").getOrElse(default)._1
