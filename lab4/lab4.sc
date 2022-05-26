@@ -1,4 +1,5 @@
 import scala.collection.immutable.ListSet
+import scala.language.postfixOps
 
 /*
   ----------------------------
@@ -190,3 +191,6 @@ val gla2 = airports.get("Glasgow") match {
 
 // 3a. Unsafe extraction of the value from a map using a valid key
 val gla3 = airports("Glasgow")
+
+// 4. Use find method to extract the pair from the map
+airports.find(_._2 == "LAX")
