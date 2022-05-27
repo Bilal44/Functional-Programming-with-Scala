@@ -218,3 +218,8 @@ for (airport <- airports) {
 airports.foreach {
   case (k, _) => println(s"Code - $k")
 }
+
+// 1c. Print the contents of airports map using for expression
+for ((k, v) <- airports) {
+  println(s"City:$k - Code:$v")
+}
