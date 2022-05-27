@@ -204,3 +204,12 @@ val default = ("not found","")
 airports.find(_._2 == "HAN").getOrElse(default)._1
 // The key-value pair does not exist and default is returned
 airports.find(_._2 == "GLA").getOrElse(default)._1
+
+// ---------
+// Iterating
+// ---------
+
+// 1. Print the airports map keys using for expression
+for (airport <- airports) {
+  println(s"Code - ${airport._1}")
+}
