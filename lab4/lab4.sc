@@ -213,3 +213,8 @@ airports.find(_._2 == "GLA").getOrElse(default)._1
 for (airport <- airports) {
   println(s"Code - ${airport._1}")
 }
+
+// 1b. Print the airports map keys using foreach HOF
+airports.foreach {
+  case (k, _) => println(s"Code - $k")
+}
