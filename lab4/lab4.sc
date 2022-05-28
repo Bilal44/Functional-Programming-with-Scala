@@ -242,3 +242,6 @@ val colour = tuple._2
 
 // Declare a tuple with elements of different types
 val getUserInfo = ("Al", 42, 200.0)
+
+// Extract several tuple elements at once and assign them to named variables
+val (name, age, weight) = getUserInfo
