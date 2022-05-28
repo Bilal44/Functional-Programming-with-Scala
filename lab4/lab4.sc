@@ -228,3 +228,14 @@ for ((k, v) <- airports) {
 airports.foreach {
   case (k, v) => println(s"City:$k - Code:$v")
 }
+
+/*
+  ---------------------------
+  Task 3 - Tuples and Zipping
+  ---------------------------
+ */
+
+// Create a tuple and access its elements
+val tuple = ("apple", "red")
+val fruit = tuple._1
+val colour = tuple._2
