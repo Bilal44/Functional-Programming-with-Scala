@@ -239,3 +239,6 @@ airports.foreach {
 val tuple = ("apple", "red")
 val fruit = tuple._1
 val colour = tuple._2
+
+// Declare a tuple with elements of different types
+val getUserInfo = ("Al", 42, 200.0)
