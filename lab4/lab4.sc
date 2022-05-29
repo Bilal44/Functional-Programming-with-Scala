@@ -245,3 +245,6 @@ val getUserInfo = ("Al", 42, 200.0)
 
 // Extract several tuple elements at once and assign them to named variables
 val (name, age, weight) = getUserInfo
+
+// 1. Test the variables name, age and weight against the expected values
+(name == "Al") && (age == 42) && (weight == 200.0)
