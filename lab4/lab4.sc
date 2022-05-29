@@ -248,3 +248,6 @@ val (name, age, weight) = getUserInfo
 
 // 1. Test the variables name, age and weight against the expected values
 (name == "Al") && (age == 42) && (weight == 200.0)
+
+// 2. Define a list of tuples
+val fruits = List(("apple", "red"), ("banana", "yellow"), ("orange", "orange"))
