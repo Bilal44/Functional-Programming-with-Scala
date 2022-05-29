@@ -251,3 +251,6 @@ val (name, age, weight) = getUserInfo
 
 // 2. Define a list of tuples
 val fruits = List(("apple", "red"), ("banana", "yellow"), ("orange", "orange"))
+
+// 2a. Convert the tuple list to a map (possible because the tuple contains exactly two values)
+val fruitMap = fruits.toMap
