@@ -266,3 +266,6 @@ val lists = (List(1,2,3), List(4,5,6), List(7,8,9))
 fruitMap foreach {
   tuple => println(s"Fruit:${tuple._1} - Colour:${tuple._2}")
 }
+//3. Create two separate lists of cities and codes:
+val cities = List("Glasgow", "Dubai", "Berlin")
+val codes = List("GLA","DXB","TXL")
