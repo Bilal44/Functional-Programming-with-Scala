@@ -257,3 +257,12 @@ val fruitMap = fruits.toMap
 
 // 2b. Declare a tuple of lists
 val lists = (List(1,2,3), List(4,5,6), List(7,8,9))
+
+// 2c. Create a map of fruits/colours using the above code
+// and print the contents by iterating to give:
+// Fruit:apple – Colour:red
+// Fruit:banana – Colour:yellow
+// Fruit:orange – Colour:orange
+fruitMap foreach {
+  tuple => println(s"Fruit:${tuple._1} - Colour:${tuple._2}")
+}
