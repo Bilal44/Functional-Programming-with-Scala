@@ -254,3 +254,6 @@ val fruits = List(("apple", "red"), ("banana", "yellow"), ("orange", "orange"))
 
 // 2a. Convert the tuple list to a map (possible because the tuple contains exactly two values)
 val fruitMap = fruits.toMap
+
+// 2b. Declare a tuple of lists
+val lists = (List(1,2,3), List(4,5,6), List(7,8,9))
