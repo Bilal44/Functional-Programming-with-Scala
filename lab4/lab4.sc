@@ -271,5 +271,10 @@ val cities = List("Glasgow", "Dubai", "Berlin")
 val codes = List("GLA","DXB","TXL")
 
 // 4. Evaluate the following expression, which uses the zip operator, and describe the
-// result and the effect of zip.
+// result and the effect of zip
 val citiesWithCode = cities zip codes
+// 5. Use the zip operator and a suitable method call to create a map of cities/codes
+// and print the contents by iterating
+citiesWithCode.foreach {
+  case (city, code) => println(s"City:$city - Code:$code")
+}
