@@ -280,3 +280,9 @@ val citiesWithCode = cities zip codes
 citiesWithCode.foreach {
   case (city, code) => println(s"City:$city - Code:$code")
 }
+
+// 6. Create three lists containing golf players and their scores in two
+// rounds of a tournament
+val players = List("Stenson", "Mickelson", "Galllacher")
+val round1 = List(70, 68, 70)
+val round2 = List(65, 72, 68)
