@@ -289,3 +289,6 @@ val round2 = List(65, 72, 68)
 
 // 7. Create a list of tuples contain scores from both rounds
 val scores1 = round1 zip round2
+
+// 7b. Print the tuple list containing the scores
+scores1 foreach(println)
