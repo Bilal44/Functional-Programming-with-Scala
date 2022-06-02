@@ -297,3 +297,6 @@ scores1 foreach(println)
 val scores2 = round1 zip round2 map{
   case (x, y) => x + y
 }
+
+// 8b. Print the total score for each player
+scores2 foreach(println)
