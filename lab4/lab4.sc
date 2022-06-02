@@ -292,3 +292,8 @@ val scores1 = round1 zip round2
 
 // 7b. Print the tuple list containing the scores
 scores1 foreach(println)
+
+// 8. Create a new list that contains the total score for each player
+val scores2 = round1 zip round2 map{
+  case (x, y) => x + y
+}
