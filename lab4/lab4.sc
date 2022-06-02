@@ -300,3 +300,11 @@ val scores2 = round1 zip round2 map{
 
 // 8b. Print the total score for each player
 scores2 foreach(println)
+
+// 9. Finally, use zip again to create a map of players and total scores and print the
+// contents by iterating, to give:
+// Player:Stenson - total score 135
+// Player:Mickelson - total score 140
+// Player:Galllacher - total score 138
+
+val playersWithScore = players zip scores2 toMap
