@@ -308,3 +308,7 @@ scores2 foreach(println)
 // Player:Galllacher - total score 138
 
 val playersWithScore = players zip scores2 toMap
+
+playersWithScore foreach {
+  case (p, s) => {println(s"Player:$p - total score $s")
+}
