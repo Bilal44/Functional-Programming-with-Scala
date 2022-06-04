@@ -330,3 +330,6 @@ def time[R](block: => R): R = {
 
 // Compute the time to populate a list via 'to' function
 time(1 to 1000 toList)
+
+// Compute the time to populate a list via 'range' function
+time(List.range(1, 1000))
