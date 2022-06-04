@@ -327,3 +327,6 @@ def time[R](block: => R): R = {
   println("Elapsed time: " + (t1 - t0) + "ns")
   result
 }
+
+// Compute the time to populate a list via 'to' function
+time(1 to 1000 toList)
