@@ -339,3 +339,9 @@ time(list.map(x => x))
 
 // Compute the time to map list elements via 'yield' function
 time(for(l <- list) yield l)
+
+// Compute the time to filter a list using an if statement
+time(for {
+  i <- 1 to 10
+  if i % 2 == 0
+} yield i)
