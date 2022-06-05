@@ -333,3 +333,6 @@ time(1 to 1000 toList)
 
 // Compute the time to populate a list via 'range' function
 time(List.range(1, 1000))
+
+// Compute the time to map list elements via 'list' function
+time(list.map(x => x))
