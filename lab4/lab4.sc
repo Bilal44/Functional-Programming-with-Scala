@@ -336,3 +336,6 @@ time(List.range(1, 1000))
 
 // Compute the time to map list elements via 'list' function
 time(list.map(x => x))
+
+// Compute the time to map list elements via 'yield' function
+time(for(l <- list) yield l)
