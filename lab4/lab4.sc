@@ -345,3 +345,6 @@ time(for {
   i <- 1 to 10
   if i % 2 == 0
 } yield i)
+
+// Compute the time to filter a list via filter' function
+time(1.to(10).filter(_ % 2 == 0))
