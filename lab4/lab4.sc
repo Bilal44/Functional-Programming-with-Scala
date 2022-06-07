@@ -348,3 +348,11 @@ time(for {
 
 // Compute the time to filter a list via filter' function
 time(1.to(10).filter(_ % 2 == 0))
+
+// Compute the time to access and modify the elements of inner list
+// using yield
+val listOfLists = List(List(1,2), List(3,4), List(5))
+time(for {
+  itemOfListOfLists <- listOfLists
+  itemOfItemOfListOfLists <- itemOfListOfLists
+} yield (itemOfItemOfListOfLists + 1))
