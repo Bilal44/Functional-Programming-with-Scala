@@ -356,3 +356,11 @@ time(for {
   itemOfListOfLists <- listOfLists
   itemOfItemOfListOfLists <- itemOfListOfLists
 } yield (itemOfItemOfListOfLists + 1))
+
+// Compute the time to access and modify the elements of inner list
+// using flatMap
+time(listOfLists.flatMap(
+  itemOfListOfLists => itemOfListOfLists.map(
+    itemOfItemOfListOfLists => itemOfItemOfListOfLists + 1
+  )
+))
