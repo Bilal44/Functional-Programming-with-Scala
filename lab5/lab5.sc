@@ -15,3 +15,10 @@ isDivisible(15, 6) // Returns false
 // 2. Define a variable isEven and assign to it the result of partially applying isDivisible
 // as follows:
 val isEven = isDivisible(_: Int, 2)
+
+// 3. Test that you can apply isEven to a single parameter and check whether it is
+// even, for example
+isEven(10)
+isEven(11)
+isEven(82)
+isEven(0)
