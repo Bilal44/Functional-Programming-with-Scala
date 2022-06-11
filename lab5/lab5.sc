@@ -27,3 +27,9 @@ isEven(0)
 // List(1,2,3,4,5,6,7,8,9,10) to a list containing even numbers only.
 val list = List(1,2,3,4,5,6,7,8,9,10)
 val evenList = list.filter(isEven)
+
+// Example 2 – Another partially applied function
+// In lab 4 you worked with a map containing airport cities and codes. In this example you
+// will create functions to iterate through and print the contents of a similar map.
+// 1. Create the airports map:
+var airports = Map("Glasgow" -> "GLA", "Dubai" -> "DXB", "Berlin" -> "TXL")
