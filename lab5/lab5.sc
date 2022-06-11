@@ -22,3 +22,8 @@ isEven(10)
 isEven(11)
 isEven(82)
 isEven(0)
+
+// 4. Use isEven as a predicate in the filter method of List to transform
+// List(1,2,3,4,5,6,7,8,9,10) to a list containing even numbers only.
+val list = List(1,2,3,4,5,6,7,8,9,10)
+val evenList = list.filter(isEven)
