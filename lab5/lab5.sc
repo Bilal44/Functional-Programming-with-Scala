@@ -34,9 +34,11 @@ val evenList = list.filter(isEven)
 // 1. Create the airports map:
 var airports = Map("Glasgow" -> "GLA", "Dubai" -> "DXB", "Berlin" -> "TXL")
 
-// 2. Define a function to print the keys and values in a map:
+// 2. Define and test a function to print the keys and values in a map:
 def printMap(mymap: Map[String,String]) = {
   for ((k, v) <- mymap) {
     println(s"$k - $v")
   }
 }
+
+printMap(airports)
