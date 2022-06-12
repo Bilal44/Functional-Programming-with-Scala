@@ -42,3 +42,12 @@ def printMap(mymap: Map[String,String]) = {
 }
 
 printMap(airports)
+
+// Note that this function will work only for a map where keys and values are strings.
+// A more generic version of the function that could be used with other types for
+// keys and values could be defined:
+def printMapGeneric[A,B](mymap: Map[A,B]) = {
+  for ((k, v) <- mymap) {
+    println(s"$k - $v")
+  }
+}
