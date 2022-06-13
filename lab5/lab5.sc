@@ -51,3 +51,5 @@ def printMapGeneric[A,B](mymap: Map[A,B]) = {
     println(s"$k - $v")
   }
 }
+
+printMapGeneric(airports)
