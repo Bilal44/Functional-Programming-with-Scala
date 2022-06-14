@@ -62,3 +62,9 @@ def printMap(mymap: Map[String,String],f:(String,String)=> Unit)
     f(k,v)
   }
 }
+
+// 4. Define the following function that can be used as a parameter – this function
+// prints a key and value in the same format as the first version of printMap
+def printKeyValue(k:String, v:String) = {
+  println(s"$k - $v")
+}
