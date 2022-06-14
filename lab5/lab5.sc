@@ -53,3 +53,12 @@ def printMapGeneric[A,B](mymap: Map[A,B]) = {
 }
 
 printMapGeneric(airports)
+
+// 3. Modify printMap as follows so that it becomes a higher-order function, where the
+// second parameter is a function that determines how to print each key-value pair
+def printMap(mymap: Map[String,String],f:(String,String)=> Unit)
+= {
+  for ((k, v) <- mymap) {
+    f(k,v)
+  }
+}
