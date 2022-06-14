@@ -68,3 +68,10 @@ def printMap(mymap: Map[String,String],f:(String,String)=> Unit)
 def printKeyValue(k:String, v:String) = {
   println(s"$k - $v")
 }
+
+// 5. Define a similar function printValueOnly that prints out a value only in the
+// following format:
+// Value – GLA
+def printValueOnly(k:String, v:String) = {
+  println(s"Value - $v")
+}
