@@ -78,5 +78,5 @@ def printValueOnly(k:String, v:String) = {
 
 // 6. Test the higher-order printMap function using the airports map and each of the
 // functions printKeyValue and printValueOnly
-printMap(airports, printKeyValue)
-printMap(airports, printValueOnly)
+printMap(airports, printKeyValue) // Prints key - value
+printMap(airports, printValueOnly) // Prints "Value" - value
