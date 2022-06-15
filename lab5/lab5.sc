@@ -85,3 +85,6 @@ printMap(airports, printValueOnly) // Prints "Value" - value
 // printMap, specifying the function parameter only, as printKeyValue. The type of
 // printKeysValues should be Map[String,String] => Unit.
 val printKeysValues = printMap(_, printKeyValue)
+
+// Test printKeyValues partial function
+printKeysValues(airports)
