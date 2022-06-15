@@ -88,3 +88,8 @@ val printKeysValues = printMap(_, printKeyValue)
 
 // Test printKeyValues partial function
 printKeysValues(airports)
+
+// Example 3 – Curried function
+// 1. Create a curried version of printMap, called printMap_curried. This will involve
+// simply modifying the parameter list.
+val printMap_curried = (printMap _).curried
