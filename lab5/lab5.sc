@@ -80,3 +80,8 @@ def printValueOnly(k:String, v:String) = {
 // functions printKeyValue and printValueOnly
 printMap(airports, printKeyValue) // Prints key - value
 printMap(airports, printValueOnly) // Prints "Value" - value
+
+// 7. Define a variable printKeysValues and assign to it the result of partially applying
+// printMap, specifying the function parameter only, as printKeyValue. The type of
+// printKeysValues should be Map[String,String] => Unit.
+val printKeysValues = printMap(_, printKeyValue)
