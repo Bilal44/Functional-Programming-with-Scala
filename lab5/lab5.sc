@@ -102,3 +102,9 @@ printMap_curried(airports)(printValueOnly)
 printMap_curried(airports){
   (k,v)=> println(s"Key - $k")
 }
+
+// 3. How would this compare with calling printMap with a lambda? Which would be
+// clearer and more readable?
+printMap(airports, {
+  (k,v)=> println(s"Key - $k")
+})
