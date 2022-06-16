@@ -93,3 +93,6 @@ printKeysValues(airports)
 // 1. Create a curried version of printMap, called printMap_curried. This will involve
 // simply modifying the parameter list.
 val printMap_curried = (printMap _).curried
+
+// Test the curried function
+printMap_curried(airports)(printValueOnly)
