@@ -96,3 +96,9 @@ val printMap_curried = (printMap _).curried
 
 // Test the curried function
 printMap_curried(airports)(printValueOnly)
+
+// 2. Test also by calling the curried function with a lambda expression as the second
+// parameter list, and enclosing this in {} instead of () as follows:
+printMap_curried(airports){
+  (k,v)=> println(s"Key - $k")
+}
