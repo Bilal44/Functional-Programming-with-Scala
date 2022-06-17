@@ -108,3 +108,5 @@ printMap_curried(airports){
 printMap(airports, {
   (k,v)=> println(s"Key - $k")
 })
+
+printMap(airports, (k,_)=> println(s"Key - $k"))
