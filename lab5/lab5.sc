@@ -130,3 +130,6 @@ printMap(airports, (k,_)=> println(s"Key - $k"))
 
 // 2. Use the get method of Map to find the value (airport code) for a given key (city)
 airports.get("Glasgow")
+
+// 3. Try doing the same for a key that doesn't exist in the map
+airports.get("Edinburgh")
