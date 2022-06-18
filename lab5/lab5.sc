@@ -121,8 +121,12 @@ printMap(airports, (k,_)=> println(s"Key - $k"))
 // In this task you will extract data from Scala maps using map and flatMap, and you will
 // see how the same results can be achieved, more conveniently, using for
 // comprehensions.
+
 // 1. Create the following map as your data for this exercise (or continue from Task 1):
 // var airports = Map(
 // "Glasgow" -> "GLA",
 // "Dubai" -> "DXB",
 // "Berlin" -> "TXL")
+
+// 2. Use the get method of Map to find the value (airport code) for a given key (city)
+airports.get("Glasgow")
