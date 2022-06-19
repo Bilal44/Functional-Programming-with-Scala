@@ -142,3 +142,7 @@ var searchlist = List("Glasgow", "Edinburgh", "Berlin")
 // How do you think you would approach this problem using an imperative
 // approach? In Scala, it’s a one-liner.
 val codes = searchlist.map(x => airports.get(x))
+
+// 5. Modify the expression for codes to use flatMap instead of map, and describe the
+// difference this makes to the result.
+val flatMapCodes = searchlist.flatMap(x => airports.get(x))
