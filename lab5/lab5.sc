@@ -137,3 +137,8 @@ airports.get("Edinburgh")
 // 4. Now you will search in the airports data for the airport codes for all cities in a list.
 // Create the search list as follows:
 var searchlist = List("Glasgow", "Edinburgh", "Berlin")
+
+// Note that the search list includes Edinburgh, which is not included in the data.
+// How do you think you would approach this problem using an imperative
+// approach? In Scala, it’s a one-liner.
+val codes = searchlist.map(x => airports.get(x))
