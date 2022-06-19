@@ -133,3 +133,7 @@ airports.get("Glasgow")
 
 // 3. Try doing the same for a key that doesn't exist in the map
 airports.get("Edinburgh")
+
+// 4. Now you will search in the airports data for the airport codes for all cities in a list.
+// Create the search list as follows:
+var searchlist = List("Glasgow", "Edinburgh", "Berlin")
