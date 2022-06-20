@@ -152,4 +152,4 @@ val flatMapCodes = searchlist.flatMap(x => airports.get(x))
 val codes_for = for{
   x <- searchlist
   y <- airports.get(x)
-} yield (y)
+} yield y
