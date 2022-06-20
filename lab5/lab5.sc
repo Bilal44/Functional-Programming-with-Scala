@@ -145,7 +145,7 @@ val codes = searchlist.map(x => airports.get(x))
 
 // 5. Modify the expression for codes to use flatMap instead of map, and describe the
 // difference this makes to the result.
-val flatMapCodes = searchlist.flatMap(x => airports.get(x))
+val codes_flatmap = searchlist.flatMap(x => airports.get(x))
 
 // Example 2 – for expression
 // Use for comprehension to achieve the same result as flatMap function
