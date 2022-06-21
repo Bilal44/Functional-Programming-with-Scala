@@ -153,3 +153,12 @@ val codes_for = for{
   x <- searchlist
   y <- airports.get(x)
 } yield y
+
+// Example 3 – Chaining functions
+// In example 1 you obtained a list of airport codes for the airports data based on a list of
+// search values. Now you will apply a further transformation to the result extracted from
+// the data by converting all the codes to lower case
+
+// 1. Enter the following code, which applies the function toLowerCase to each
+// element in the result of the search.
+val codes_lower = searchlist.map(x => airports.get(x)).map(y=>y.toLowerCase)
