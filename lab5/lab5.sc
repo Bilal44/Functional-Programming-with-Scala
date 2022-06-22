@@ -161,4 +161,9 @@ val codes_for = for{
 
 // 1. Enter the following code, which applies the function toLowerCase to each
 // element in the result of the search.
-val codes_lower = searchlist.map(x => airports.get(x)).map(y=>y.toLowerCase)
+// val codes_lower = searchlist.map(x => airports.get(x)).map(y=>y.toLowerCase)
+
+// 2. Modify the expression for codes_lower to use flatMap instead of map, and
+// describe the difference this makes. Why does the use of flatMap allow these
+// transformations to be chained?
+val codes_lower = searchlist.flatMap(x => airports.get(x)).map(y=>y.toLowerCase)
