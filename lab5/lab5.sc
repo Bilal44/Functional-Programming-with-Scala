@@ -167,3 +167,10 @@ val codes_for = for{
 // describe the difference this makes. Why does the use of flatMap allow these
 // transformations to be chained?
 val codes_lower = searchlist.flatMap(x => airports.get(x)).map(y=>y.toLowerCase)
+
+// 3. Write an equivalent for expression to achieve the same result. This will involve
+// changing only the yield expression in example 2.
+val codes_lower_for = for{
+  x <- searchlist
+  y <- airports.get(x)
+} yield y.toLowerCase
