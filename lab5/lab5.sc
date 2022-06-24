@@ -174,3 +174,16 @@ val codes_lower_for = for{
   x <- searchlist
   y <- airports.get(x)
 } yield y.toLowerCase
+
+// Example 4 – A more complex for comprehension
+// The final example is a bit more complicated, to demonstrate more of the power of for
+// comprehensions. You will define the search using the keys of a map rather than a list,
+// and you will combine the values in the search map with the values extracted from the
+// data.
+
+// 4. Create an initial search map:
+var searchmap = Map("Glasgow" -> "Scotland", "Edinburgh" -> "Scotland", "Berlin" -> "Germany")
+// The aim of this exercise is to find the airports, if any, matching the keys in these
+// map, and for each result found, combine the code with the matching country
+// name in the search map, to get the result:
+//  List(GLA - Scotland, TXL - Germany)
