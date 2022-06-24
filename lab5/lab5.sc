@@ -187,3 +187,12 @@ var searchmap = Map("Glasgow" -> "Scotland", "Edinburgh" -> "Scotland", "Berlin"
 // map, and for each result found, combine the code with the matching country
 // name in the search map, to get the result:
 //  List(GLA - Scotland, TXL - Germany)
+
+//5. Enter the following code and check that it gives the required result. Study the
+// code (and the comments) to make sure you understand how it works. Why do
+// you need the final call to .toList?
+val codes_countries_for = for{
+  x <- searchmap.keys // the keys in the searchmap
+  y <- airports.get(x) // get codes for which a value exists
+  z <- searchmap.get(x) // country for each key in searchmap
+} yield(y + " - " + z)
