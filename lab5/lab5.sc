@@ -196,3 +196,4 @@ val codes_countries_for = for{
   y <- airports.get(x) // get codes for which a value exists
   z <- searchmap.get(x) // country for each key in searchmap
 } yield(y + " - " + z)
+codes_countries_for.toList
