@@ -197,3 +197,11 @@ val codes_countries_for = for{
   z <- searchmap.get(x) // country for each key in searchmap
 } yield(y + " - " + z)
 codes_countries_for.toList
+
+// 6. Note that this could also be written using map/flatMap calls, but this one is
+// definitely easier with a for comprehension.
+// For comprehensions are very powerful and there are many possible variations to solve a
+// wide range of problems. There are more examples in your lecture notes, and you can
+// find some more useful examples at:
+// https://gist.github.com/loicdescotte/4044169
+// http://eddmann.com/posts/using-for-comprehensions-in-scala/
