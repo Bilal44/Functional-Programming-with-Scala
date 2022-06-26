@@ -205,3 +205,42 @@ codes_countries_for.toList
 // find some more useful examples at:
 // https://gist.github.com/loicdescotte/4044169
 // http://eddmann.com/posts/using-for-comprehensions-in-scala/
+
+/*
+  -------------------------------------------------------
+  Task 3. Creating a (functional) menu-driven application
+  -------------------------------------------------------
+ */
+
+// Scala can be used to build pretty much any type of application, for example GUI
+// applications (using Java UI libraries) or web applications (using a framework such as
+// Play). In this task, though, you will create a simple text-based menu-driven console
+// application. You may have created applications like this using other languages, but this
+// example will have a functional twist or two.
+
+// The application will read in some data from a text file which contains Bundesliga football
+// teams and their current points total. This data will be stored in a Map. Here is an excerpt
+// from the file:
+// Bayern Munich, 24
+// RB Leipzig, 24
+// Hoffenheim, 20
+
+// The application will then display a menu with options to extract and process information
+// from the data. Actually there will only two options initially, to list the teams and their
+// points in order of the number of points, and to quit the application. An example session
+// (with some output omitted for brevity) is shown below:
+//
+// Please select one of the following:
+// 1 - show points for all teams
+// 2 - quit
+// 1
+// Bayern Munich: 24
+// RB Leipzig: 24
+// Hertha BSC: 20
+// …
+// Please select one of the following:
+// 1 - show points for all teams
+// 2 - quit
+// 2
+// selected quit
+// Process finished with exit code 0
